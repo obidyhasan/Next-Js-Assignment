@@ -19,7 +19,7 @@ const Navbar = async () => {
   );
 
   return (
-    <div className="sticky top-0 shadow-sm">
+    <div className="sticky top-0 shadow-sm z-10">
       <div className="max-w-7xl mx-auto px-5 navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
