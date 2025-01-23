@@ -46,7 +46,9 @@ const Navbar = async () => {
               {navbarLinks}
             </ul>
           </div>
-          <a className="text-2xl font-bold">Next Js</a>
+          <Link href={"/"} className="text-2xl font-bold">
+            Next Js
+          </Link>
         </div>
         <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">{navbarLinks}</ul>
