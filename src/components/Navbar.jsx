@@ -1,6 +1,11 @@
+import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = async () => {
+  let user = null;
+  const { getUser } = getKindeServerSession();
+  user = await getUser();
+
   const navbarLinks = (
     <>
       <li>
@@ -47,7 +52,15 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{navbarLinks}</ul>
         </div>
         <div className="navbar-end">
-          <button className="btn">Login</button>
+          {user ? (
+            <Link href={"api/auth/logout"} className="btn">
+              Logout
+            </Link>
+          ) : (
+            <Link href={"api/auth/login"} className="btn">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>

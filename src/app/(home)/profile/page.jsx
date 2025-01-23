@@ -1,7 +1,7 @@
 const page = () => {
   return (
-    <div>
-      <h1>Profile</h1>
+    <div className="max-w-7xl mx-auto px-5 my-10">
+      <h1 className="font-bold text-2xl">Welcome to your profile!</h1>
     </div>
   );
 };
